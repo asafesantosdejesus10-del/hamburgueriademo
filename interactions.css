@@ -1,0 +1,53 @@
+/* Vídeo normal do hero, com controles de reprodução nos dois slides. */
+.hero-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-hours-icon { color: var(--gold); font-size: 15px; line-height: 1; }
+.hero-image-burger::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 56% 48%, transparent 34%, rgba(17, 17, 15, .12) 64%, rgba(17, 17, 15, .64) 100%),
+    linear-gradient(90deg, rgba(17, 17, 15, .16), transparent 18%, transparent 82%, rgba(17, 17, 15, .32));
+}
+
+/* Uma única fatia de queijo aparece inteira no cartão do adicional. */
+.product-image.contain-image img {
+  object-fit: contain;
+  padding: 0;
+  background: #fff;
+}
+
+/* Entrada gradual dos elementos à medida que aparecem no viewport. */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .65s ease var(--reveal-delay, 0ms), transform .65s ease var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal-item.is-visible { opacity: 1; transform: translateY(0); }
+.product-card.reveal-item.is-visible:hover { transform: translateY(-4px); }
+
+@media (max-width: 720px) {
+  .hero-video { object-position: 60% center; }
+  .hero-image-burger::after {
+    background: radial-gradient(ellipse at 52% 45%, transparent 32%, rgba(17, 17, 15, .15) 68%, rgba(17, 17, 15, .58) 100%);
+  }
+  .product-image.contain-image img { padding: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item, .reveal-item.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

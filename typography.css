@@ -1,0 +1,72 @@
+/* Escala de texto ampliada: mantém hierarquia e legibilidade em todas as telas. */
+body { font-size: 16px; }
+.main-nav > a:not(.button) { font-size: 14px; }
+.button { min-height: 54px; font-size: 14px; }
+.button-small { min-height: 45px; font-size: 13px; }
+.hero-content h1 { font-size: clamp(60px, 6.5vw, 92px); }
+.hero-copy { font-size: 16px; line-height: 1.75; }
+.hero-hours { font-size: 12px; }
+.eyebrow { font-size: 11px; }
+.review-content h2 { font-size: clamp(54px, 5.8vw, 76px); }
+.review-content .hero-copy { font-size: 16px; }
+.reviewer strong { font-size: 13px; }
+.reviewer small { font-size: 11px; }
+.text-link { font-size: 13px; }
+.info-strip small { font-size: 10px; }
+.info-strip strong { font-size: 13px; }
+.section-heading h2, .about-copy h2, .contact-copy h2 { font-size: clamp(50px, 5.5vw, 72px); }
+.section-heading > p { font-size: 14px; }
+.category-tab { padding: 12px 18px; font-size: 12px; }
+.product-info h3 { font-size: 23px; }
+.product-info p { font-size: 12px; line-height: 1.7; }
+.product-price { font-size: 16px; }
+.product-order { font-size: 11px; }
+.menu-disclaimer { font-size: 11px; }
+.about-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.85; }
+.about-copy .about-edit-note { font-size: 12px; }
+.location-details strong { font-size: 13px; }
+.location-details > p { font-size: 11px; }
+.contact-copy > p:last-child { font-size: 13px; }
+.social-grid strong { font-size: 12px; }
+.social-grid small { font-size: 10px; }
+.footer-main > p { font-size: 12px; }
+.footer-address strong { font-size: 11px; }
+.footer-bottom { font-size: 10px; }
+
+@media (max-width: 1000px) {
+  .main-nav > a:not(.button) { font-size: 12px; }
+  .product-info h3 { font-size: 20px; }
+}
+@media (max-width: 720px) {
+  .main-nav > a:not(.button) { font-size: 15px; }
+  .button { min-height: 48px; font-size: 13px; }
+  .hero-content h1 { font-size: clamp(54px, 10vw, 68px); }
+  .hero-copy { font-size: 14px; }
+  .hero-hours { font-size: 11px; }
+  .eyebrow { font-size: 9px; }
+  .review-content h2 { font-size: clamp(42px, 9vw, 54px); }
+  .review-content .hero-copy { font-size: 13px; }
+  .reviewer strong { font-size: 12px; }
+  .reviewer small { font-size: 10px; }
+  .text-link { font-size: 12px; }
+  .info-strip small { font-size: 8px; }
+  .info-strip strong { font-size: 11px; }
+  .section-heading h2, .about-copy h2, .contact-copy h2 { font-size: clamp(43px, 9vw, 55px); }
+  .section-heading > p { font-size: 12px; }
+  .category-tab { padding: 11px 13px; font-size: 11px; }
+  .product-info h3 { font-size: 17px; }
+  .product-info p { font-size: 10px; }
+  .product-price { font-size: 13px; }
+  .product-order { font-size: 9px; }
+  .menu-disclaimer { font-size: 10px; }
+  .about-copy > p:not(.eyebrow) { font-size: 12px; }
+  .about-copy .about-edit-note { font-size: 11px; }
+  .location-details strong { font-size: 12px; }
+  .location-details > p { font-size: 10px; }
+  .contact-copy > p:last-child { font-size: 11px; }
+  .social-grid strong { font-size: 10px; }
+  .social-grid small { font-size: 8px; }
+  .footer-main > p { font-size: 10px; }
+  .footer-address strong { font-size: 9px; }
+  .footer-bottom { font-size: 9px; }
+}
