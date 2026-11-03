@@ -44,7 +44,7 @@ function showProducts(category) {
   grid.innerHTML = products[category].map((item) => `
     <article class="product-card">
       <div class="product-image ${item.imageClass || ''}"><img loading="lazy" decoding="async" src="${item.image}" alt="${item.alt || item.name}" /></div>
-      <div class="product-info"><h3>${item.name}</h3><p>${item.description}</p><div class="product-bottom"><span class="product-price">${item.price}</span><a class="product-order" href="https://exemplo.com/delivery">Pedir <span>↗</span></a></div></div>
+      <div class="product-info"><h3>${item.name}</h3><p>${item.description}</p><div class="product-bottom"><span class="product-price">${item.price}</span><a class="product-order" href="https://exemplo.com/delivery">Pedir <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M10 5h9v9"/></svg></a></div></div>
     </article>`).join('');
   observeReveals(grid.querySelectorAll('.product-card'));
 }

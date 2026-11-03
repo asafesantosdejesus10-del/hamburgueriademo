@@ -1,4 +1,23 @@
 /* Vídeo normal do hero, com controles de reprodução nos dois slides. */
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+}
+.icon-arrow { width: 15px; height: 15px; }
+.icon-chevron { width: 19px; height: 19px; }
+.icon-up { width: 14px; height: 14px; }
+.icon-star { width: 21px; height: 21px; fill: currentColor; stroke: none; }
+.icon-star-filled { width: 18px; height: 18px; fill: currentColor; stroke: none; }
+.icon-dot { fill: currentColor; stroke: none; }
+.icon-social { width: 20px; height: 20px; }
 .hero-video {
   display: block;
   width: 100%;
@@ -6,7 +25,17 @@
   object-fit: cover;
   object-position: center;
 }
-.hero-hours-icon { color: var(--gold); font-size: 15px; line-height: 1; }
+.hero-hours-icon { color: var(--gold); width: 15px; height: 15px; }
+.info-icon { width: 22px; height: 22px; color: var(--gold); }
+.detail-icon { width: 20px; height: 20px; color: var(--gold); }
+.note-star { width: 23px; height: 23px; color: var(--gold); }
+.map-pin { width: 43px; height: 43px; color: var(--gold); display: block; background: transparent; border-radius: 0; transform: none; box-shadow: none; }
+.stars { display: flex; gap: 3px; }
+.slide-arrow .icon-chevron { color: inherit; }
+.social-grid b .icon-arrow { width: 15px; height: 15px; color: var(--gold); }
+.product-order .icon-arrow { width: 12px; height: 12px; margin-left: 7px; color: var(--gold); }
+.button .icon-arrow { margin-left: 1px; }
+.back-top .icon-up { margin-left: 3px; color: var(--gold); }
 .hero-image-burger::after {
   content: "";
   position: absolute;
@@ -37,6 +66,7 @@
 
 @media (max-width: 720px) {
   .hero-video { object-position: 60% center; }
+  .info-icon { width: 18px; height: 18px; }
   .hero-image-burger::after {
     background: radial-gradient(ellipse at 52% 45%, transparent 32%, rgba(17, 17, 15, .15) 68%, rgba(17, 17, 15, .58) 100%);
   }
